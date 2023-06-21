@@ -5,8 +5,32 @@
     <title>Cancer Data</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      ul[role="list"] {
+        list-style: none;
+        padding-left: 0; /* Remove indentation */
+      }
+      ul[role="list"] > li:not(:first-of-type) {
+        margin-top: 15px;
+      }
+      .footnotes {
+        margin-left: 80px;
+      }
+      @media only screen and (min-width: 690px) {
+        .footnotes {
+          column-gap: 40px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          max-width: 890px;
+        }
+      }
+    </style>
   </head>
-
   <body>
     <tableau-viz
       device="default"
@@ -21,62 +45,68 @@
         Original URL: src="https://public.tableau.com/views/CancerDataByPrefecture/Home"
       -->
     </tableau-viz>
-    <h2>各指標についての注釈</h2>
-    <ul>
-      <li>
-        死亡率：75歳未満年齢調整死亡率。算出に用いた死亡数は人口動態統計保管統計表に、人口は国勢調査及び総務省推計人口に基づく。年齢調整のための基準人口は1985年モデル人口を使用。
-      </li>
-      <li>
-        がん検診率：市区町村が行うがん検診のほか、健康診断、健康診査および人間ドックで受診したものを含む。2016年の熊本県は、熊本地震のため調査が行われず、不明。
-      </li>
-      <li>
-        喫煙率：3年おきに実施される国民生活基礎調査において、20歳以上の回答者が「あなたはタバコを吸いますか」の問いに対し、（１）「毎日吸っている」（２）「時々吸う日がある」（３）「以前は吸っていたが1ヶ月以上吸っていない」（４）「吸わない」の四つ選択肢のうち、（１）と（２）を選んだ割合。2016年の熊本県は、熊本地震のため調査が行われず、不明。
-      </li>
-      <li>
-        中心部への人口偏在性：「人口集中地区の人口比率」「住戸面積」「住宅保有割合」「高齢者がいる世帯の割合」の四つの統計指標を主成分分析によってまとめた指標。0から1までの値を取るように基準化している。値が大きいほど、人口が偏在している。
-      </li>
-      <li>
-        社会経済状況：「失業率」「サービス業就業率」「若年無業者割合」「県民所得」「母子父子世帯割合」の五つの統計指標を主成分分析によってまとめた指標。0から1までの値を取るように基準化している。値が大きいほど、状況が悪い。
-      </li>
-    </ul>
-    <h2>データの出典</h2>
-    <ul>
-      <li>
-        死亡率：国立がん研究センターがん情報サービス「<a
-          href="https://ganjoho.jp/reg_stat/statistics/data/dl/index.html#anchor1"
-          rel="noreferrer"
-          target="_blank"
-          >都道府県別がん死亡データ・部位別75歳未満年齢調整死亡率（1995年～2021年）</a
-        >」
-      </li>
-      <li>
-        がん検診率：国立がん研究センターがん情報サービス「<a
-          href="https://ganjoho.jp/reg_stat/statistics/stat/screening/dl_screening.html#anchor4"
-          rel="noreferrer"
-          target="_blank"
-        >
-          国民生活基礎調査による都道府県別がん検診受診率データ（2007年、2010年、2013年、2016年、2019年）</a
-        >」
-      </li>
-      <li>
-        喫煙率：国立がん研究センターがん情報サービス「<a
-          href="https://ganjoho.jp/reg_stat/statistics/data/dl/index.html#anchor5"
-          rel="noreferrer"
-          target="_blank"
-        >
-          国民生活基礎調査による都道府県別喫煙率データ（2001～2019年） </a
-        >」
-      </li>
-      <li>
-        中心部への人口偏在性・社会経済状況：片岡葵・井上勇太・西岡大輔・伊藤ゆり・近藤尚己
-        (2023)「都道府県別の社会経済状況を測る合成指標の開発：健康寿命の都道府県間格差対策に向けて」<a
-          href="https://www.hws-kyokai.or.jp/publishing/type/magazine/103-magazine-list/2741-koseinoshihyou2306.html"
-          rel="noreferrer"
-          target="_blank"
-          >『厚生の指標』70(6)</a
-        >, pp. 9–18.
-      </li>
-    </ul>
+    <div class="footnotes">
+      <section>
+        <h2>各指標についての注釈</h2>
+        <ul role="list">
+          <li>
+            死亡率：75歳未満年齢調整死亡率。算出に用いた死亡数は人口動態統計保管統計表に、人口は国勢調査及び総務省推計人口に基づく。年齢調整のための基準人口は1985年モデル人口を使用。
+          </li>
+          <li>
+            がん検診率：市区町村が行うがん検診のほか、健康診断、健康診査および人間ドックで受診したものを含む。2016年の熊本県は、熊本地震のため調査が行われず、不明。
+          </li>
+          <li>
+            喫煙率：3年おきに実施される国民生活基礎調査において、20歳以上の回答者が「あなたはタバコを吸いますか」の問いに対し、（１）「毎日吸っている」（２）「時々吸う日がある」（３）「以前は吸っていたが1ヶ月以上吸っていない」（４）「吸わない」の四つ選択肢のうち、（１）と（２）を選んだ割合。2016年の熊本県は、熊本地震のため調査が行われず、不明。
+          </li>
+          <li>
+            中心部への人口偏在性：「人口集中地区の人口比率」「住戸面積」「住宅保有割合」「高齢者がいる世帯の割合」の四つの統計指標を主成分分析によってまとめた指標。0から1までの値を取るように基準化している。値が大きいほど、人口が偏在している。
+          </li>
+          <li>
+            社会経済状況：「失業率」「サービス業就業率」「若年無業者割合」「県民所得」「母子父子世帯割合」の五つの統計指標を主成分分析によってまとめた指標。0から1までの値を取るように基準化している。値が大きいほど、状況が悪い。
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>データの出典</h2>
+        <ul role="list">
+          <li>
+            死亡率：国立がん研究センターがん情報サービス「<a
+              href="https://ganjoho.jp/reg_stat/statistics/data/dl/index.html#anchor1"
+              rel="noreferrer"
+              target="_blank"
+              >都道府県別がん死亡データ・部位別75歳未満年齢調整死亡率（1995年～2021年）</a
+            >」
+          </li>
+          <li>
+            がん検診率：国立がん研究センターがん情報サービス「<a
+              href="https://ganjoho.jp/reg_stat/statistics/stat/screening/dl_screening.html#anchor4"
+              rel="noreferrer"
+              target="_blank"
+            >
+              国民生活基礎調査による都道府県別がん検診受診率データ（2007年、2010年、2013年、2016年、2019年）</a
+            >」
+          </li>
+          <li>
+            喫煙率：国立がん研究センターがん情報サービス「<a
+              href="https://ganjoho.jp/reg_stat/statistics/data/dl/index.html#anchor5"
+              rel="noreferrer"
+              target="_blank"
+            >
+              国民生活基礎調査による都道府県別喫煙率データ（2001～2019年） </a
+            >」
+          </li>
+          <li>
+            中心部への人口偏在性・社会経済状況：片岡葵・井上勇太・西岡大輔・伊藤ゆり・近藤尚己
+            (2023)「都道府県別の社会経済状況を測る合成指標の開発：健康寿命の都道府県間格差対策に向けて」<a
+              href="https://www.hws-kyokai.or.jp/publishing/type/magazine/103-magazine-list/2741-koseinoshihyou2306.html"
+              rel="noreferrer"
+              target="_blank"
+              >『厚生の指標』70(6)</a
+            >, pp. 9–18.
+          </li>
+        </ul>
+      </section>
+    </div>
     <script
       type="module"
       src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
