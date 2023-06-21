@@ -15,6 +15,28 @@
         list-style: none;
         padding-left: 0; /* Remove indentation */
       }
+      /* Font (source: https://zenn.dev/tak_dcxi/articles/588fbc205251043dc357) */
+      .footnotes {
+        color: #757575;
+        font-family: "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN",
+          "Hiragino Sans", Meiryo, sans-serif;
+        font-size: 12px;
+      }
+      .footnotes h2 {
+        font-weight: 400;
+      }
+      .footnotes a {
+        color: #4e79a7; /* taken from Tableau color palette */
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-position: under;
+      }
+      .footnotes a:hover,
+      .footnotes a:focus {
+        font-weight: 700;
+        text-decoration-thickness: 2px;
+      }
+      /* Layout */
       ul[role="list"] > li:not(:first-of-type) {
         margin-top: 15px;
       }
@@ -41,9 +63,9 @@
       width="1300px"
     >
       <!-- 
-        Given the dashboard size is 1280x860, 1300x900 is required so scroll bars will not appear
-        Original URL: src="https://public.tableau.com/views/CancerDataByPrefecture/Home"
-      -->
+          Given the dashboard size is 1280x860, 1300x900 is required so scroll bars will not appear
+          Original URL: src="https://public.tableau.com/views/CancerDataByPrefecture/Home"
+        -->
     </tableau-viz>
     <div class="footnotes">
       <section>
