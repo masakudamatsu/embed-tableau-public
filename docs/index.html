@@ -58,19 +58,22 @@
     </style>
   </head>
   <body>
-    <tableau-viz
-      device="default"
-      height="900px"
-      id="tableauViz"
-      src="https://public.tableau.com/views/CancerDataByPrefectureTest/Home"
-      toolbar="top"
-      width="1300px"
-    >
-      <!-- 
+    <!-- To prevent layout shift -->
+    <div style="height: 900px; width: 1300px">
+      <tableau-viz
+        device="default"
+        height="900px"
+        id="tableauViz"
+        src="https://public.tableau.com/views/CancerDataByPrefectureTest/Home"
+        toolbar="top"
+        width="1300px"
+      >
+        <!-- 
           Given the dashboard size is 1280x860, 1300x900 is required so scroll bars will not appear
           Original URL: src="https://public.tableau.com/views/CancerDataByPrefecture/Home"
         -->
-    </tableau-viz>
+      </tableau-viz>
+    </div>
     <div class="footnotes">
       <section>
         <h2>各指標についての注釈</h2>
