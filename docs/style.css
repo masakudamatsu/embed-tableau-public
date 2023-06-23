@@ -49,3 +49,48 @@ ul[role="list"] > li:not(:first-of-type) {
     max-width: 890px;
   }
 }
+/* Drop down menu */
+.chart-heading {
+  font-family: "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+}
+.select-container {
+  position: relative;
+}
+.select-container:before {
+  content: "▿";
+  font-size: 18px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -4px;
+  color: #000;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  z-index: -1;
+}
+.chart-heading-select {
+  color: #000;
+  font-weight: 400;
+  font-size: 24px;
+  background-color: transparent;
+  border: solid #000;
+  border-width: 0 0 1px;
+  margin-left: 10px;
+  border-radius: 0;
+  padding: 2px 26px 2px 6px;
+  line-height: 1.2;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.chart-heading-select:focus {
+  outline: none;
+}
