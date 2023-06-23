@@ -12,9 +12,25 @@ body {
   font-family: "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
 }
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
 h1 {
   color: #2d2d2d;
   font-weight: 400;
+}
+a {
+  color: #4e79a7; /* taken from Tableau color palette */
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+}
+a:hover,
+a:focus {
+  font-weight: 700;
+  text-decoration-thickness: 2px;
 }
 .footnotes {
   color: #757575;
@@ -22,17 +38,6 @@ h1 {
 }
 .footnotes h2 {
   font-weight: 400;
-}
-.footnotes a {
-  color: #4e79a7; /* taken from Tableau color palette */
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-position: under;
-}
-.footnotes a:hover,
-.footnotes a:focus {
-  font-weight: 700;
-  text-decoration-thickness: 2px;
 }
 /* Layout */
 ul[role="list"] > li:not(:first-of-type) {
