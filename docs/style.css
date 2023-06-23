@@ -8,10 +8,16 @@ ul[role="list"] {
   padding-left: 0; /* Remove indentation */
 }
 /* Font (source: https://zenn.dev/tak_dcxi/articles/588fbc205251043dc357) */
-.footnotes {
-  color: #757575;
+body {
   font-family: "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
+}
+h1 {
+  color: #2d2d2d;
+  font-weight: 400;
+}
+.footnotes {
+  color: #757575;
   font-size: 12px;
 }
 .footnotes h2 {
